@@ -3,6 +3,7 @@
 // Call this function when the page loads (the "ready" event)
 $(document).ready(function() {
 	initializePage();
+	$("button").click(clicked);
 });
 
 /*
@@ -10,4 +11,10 @@ $(document).ready(function() {
  */
 function initializePage() {
 	// your code here
+}
+
+function clicked(response) {
+	console.log("hey!");
+	ga("send", "event", "like", "click");
+
 }
